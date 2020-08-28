@@ -8,27 +8,27 @@ public class FindLoopTest {
 
     @Test
     public void whenArrayHas5Then0() {
-        int input[] = {5, 4, 3, 2};
+        int[] input = {5, 4, 3, 2};
         int value = 5;
-        int result = FindLoop.indexOf(input, value);
+        int result = FindLoop.scan(input, value);
         int expect = 0;
         assertThat(result, is(expect));
     }
 
     @Test
     public void whenArrayHas2Then3() {
-        int input[] = {5, 4, 3, 2};
+        int[] input = {5, 4, 3, 2};
         int value = 2;
-        int result = FindLoop.indexOf(input, value);
+        int result = FindLoop.scan(input, value);
         int expect = 3;
         assertThat(result, is(expect));
     }
 
     @Test
     public void whenArrayHas4Then1() {
-        int input [] = {5, 4, 3, 2};
+        int[] input = {5, 4, 3, 2};
         int value = 4;
-        int result = FindLoop.indexOf(input, value);
+        int result = FindLoop.scan(input, value);
         int expect = 1;
         assertThat(result, is(expect));
     }

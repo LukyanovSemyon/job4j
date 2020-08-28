@@ -1,14 +1,14 @@
 package ru.job4j.array;
 
 public class FindLoop {
-    public static int indexOf(int[] data, int el) {
-        int rst = -1;
-        for (int index = 0; index < data.length; index++) {
-            if (data[index] == el) {
-                rst = index;
+    public static int scan(int[] input, int value) {
+        int result = -1;
+        for (int index = 0; index < input.length; index++) {
+            if (input[index] == value) {
+                result = index;
                 break;
             }
         }
-        return rst;
+        return result;
     }
 }

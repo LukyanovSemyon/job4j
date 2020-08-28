@@ -8,28 +8,28 @@ public class CheckTest {
     @Test
     public void whenDataMonoByTrueThenTrue() {
         boolean[] input = new boolean[] {true, true, true};
-        boolean result = Check.mono(input);
+        boolean result = Check.scan(input);
         assertThat(result, is(true));
     }
 
     @Test
     public void whenDataMonoByTrueThenFalse() {
         boolean[] input = new boolean[] {false, false, false};
-        boolean result = Check.mono(input);
+        boolean result = Check.scan(input);
         assertThat(result, is(true));
     }
 
     @Test
     public void whenDataNotMonoByTrueThenFalse() {
         boolean[] input = new boolean[] {true, false, true};
-        boolean result = Check.mono(input);
+        boolean result = Check.scan(input);
         assertThat(result, is(false));
     }
 
     @Test
     public void whenDataNotMonoByTrueThenFalse2() {
         boolean[] input = new boolean[] {false, false, false, true};
-        boolean result = Check.mono(input);
+        boolean result = Check.scan(input);
         assertThat(result, is(false));
     }
 }
