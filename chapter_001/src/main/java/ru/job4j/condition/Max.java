@@ -5,10 +5,10 @@ public class Max {
         return first >= second ? first : second;
     }
     public static int max(int first, int second, int third) {
-        return first >= max(second, third) ? first : max(second, third);
+        return max(first, max(second, third));
     }
     public static int max(int first, int second, int third, int forth) {
-        return first >= max(second, third, forth) ? first : max(second, third, forth);
+        return max(first, max(second, third, forth));
     }
     public static void main(String[] args) {
         int num = Max.max(33, 40,55);
